@@ -9,3 +9,8 @@ My headline will go here
 {% block pubdate %}
   <time datetime="2018-03-10" pubdate>Mar. 10, 2018</time>
 {% endblock %}
+{% block content %}
+  {% for obj in site.data.harvard_park_homicides %}
+    {{ obj.first_name }} {{ obj.last_name }}<br>
+  {% endfor %}
+{% endblock %}
